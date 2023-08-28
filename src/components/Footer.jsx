@@ -97,9 +97,9 @@ function Footer() {
   ];
 
   return (
-    <div className=" bg-[#021E35] px-[140px] pb-[50px] pt-[70px] ">
-      <div className="flex justify-between">
-        <div className="w-[300px]">
+    <div className=" bg-[#021E35] px-[20px] pb-[50px] pt-[70px] md:px-[140px] ">
+      <div className="flex flex-col md:flex-row md:justify-between">
+        <div className="mb-[30px] md:mb-0 md:w-[300px]">
           <a href="/" className="mb-[25px] flex flex-row items-center gap-2">
             <img src={companyLogo} alt="Company logo" />
             <div className="">
@@ -113,7 +113,7 @@ function Footer() {
             to your destination on time and safely.
           </p>
 
-          <div className="flex gap-[25px]">
+          <div className="flex gap-[25px] ">
             {socialMedia.map((social) => (
               <a href={social.link} key={social.name}>
                 <img
@@ -125,7 +125,7 @@ function Footer() {
             ))}
           </div>
         </div>
-        <div className="flex gap-[50px]">
+        <div className="flex flex-col gap-[50px] md:flex-row">
           {
             // Footer columns
             footerColumns.map((column) => (
@@ -149,14 +149,14 @@ function Footer() {
         </div>
       </div>
       <hr className="h-[1px] w-full border-none bg-[#FCFCFD]" />
-      <div className=" mt-[40px] flex justify-between items-center text-[#FCFCFD]">
+      <div className=" mt-[40px] flex flex-col items-center justify-between gap-[50px]  text-[#FCFCFD] md:flex-row md:gap-0">
         <p className="text-[18px] ">Copyright 2023 Mobiling Co.</p>
-        <div className="flex gap-[55px] text-[18px]">
+        <div className="md:items-normal flex flex-col items-center gap-[55px] text-[18px] md:flex-row">
           <a href="/">Terms of Service</a>
           <a href="/">Privacy Policy</a>
           <a href="/">Cookies</a>
         </div>
-        <div className="flex gap-[15px] items-center">
+        <div className="flex items-center gap-[15px]">
           <img src={biGlobe} alt="Globe icon" className="h-[24px] w-[24px]" />
           <a href="/" className="">
             English
