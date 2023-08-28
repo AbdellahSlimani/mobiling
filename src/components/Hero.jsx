@@ -117,12 +117,20 @@ function Hero() {
               className="h-auto w-full object-contain"
             />
             <div className="mr-[80px] flex items-center justify-center gap-[68px]">
-              <img src={arrowLeft} alt="arrowLeft" className="cursor-pointer" />
-              <img
-                src={arrowRight}
-                alt="arrowRight"
-                className="cursor-pointer"
-              />
+              <button>
+                <img
+                  src={arrowLeft}
+                  alt="arrowLeft"
+                  className="cursor-pointer"
+                />
+              </button>
+              <button>
+                <img
+                  src={arrowRight}
+                  alt="arrowRight"
+                  className="cursor-pointer"
+                />
+              </button>
             </div>
           </div>
         </div>
