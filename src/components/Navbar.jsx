@@ -7,6 +7,10 @@ function Navbar() {
 
   const [hoveredLink, setHoveredLink] = useState(null);
 
+  const [isMenuClicked, setIsMenuClicked] = useState(false);
+  const [burgerClass, setBurgerClass] = useState("burger_bar");
+  const [menuClass, setMenuClass] = useState("navMenu fade-out");
+
   const navLinks = [
     {
       id: 1,
@@ -64,21 +68,65 @@ function Navbar() {
     },
   ];
 
+  const manageMenu = () => {
+    if (!isMenuClicked) {
+      setBurgerClass("burger_bar clicked");
+      setMenuClass("navMenu fade-in");
+    } else {
+      setBurgerClass("burger_bar");
+      setMenuClass("navMenu fade-out");
+    }
+    setIsMenuClicked((prevState) => !prevState);
+  };
+
   const isLinkActive = (link) =>
     location === link ||
     (location.startsWith(link) && location[link.length] === "/");
 
   return (
-    <div className="absolute left-0 top-0 z-20 flex w-full items-center justify-between px-[140px] py-[36px]">
-      <a href="/" className="flex flex-row items-center gap-2">
-        <img src={companyLogo} alt="Company logo" />
-        <div className="">
-          <h1 className="text-xl font-medium text-[#1A89EC]">Mobiling</h1>
-          <p className="text-xs font-light text-[#98A2B3]">Automobile</p>
+    <div className="absolute left-0 top-0 z-20 flex w-full items-center justify-between p-[20px] md:px-[140px] md:py-[36px]">
+      <div className="flex w-full items-center justify-between gap-[20px] md:w-fit md:justify-normal">
+        <a href="/" className="flex flex-row items-center gap-2">
+          <img src={companyLogo} alt="Company logo" />
+          <div className="">
+            <h1 className="text-xl font-medium text-[#1A89EC]">Mobiling</h1>
+            <p className="text-xs font-light text-[#98A2B3]">Automobile</p>
+          </div>
+        </a>
+        <div className="flex flex-row justify-end md:hidden">
+          <div onClick={manageMenu} className="hamburger_Menu">
+            <span className={burgerClass}></span>
+            <span className={burgerClass}></span>
+            <span className={burgerClass}></span>
+          </div>
+          <div className={`${menuClass}`}>
+            <div className="mb-5 flex flex-col items-center justify-center">
+              <button className="mb-2 rounded-[5px] bg-[#1A89EC] px-[20px] py-[10px] text-sm text-white">
+                Sign in
+              </button>
+              <hr className="h-[2px] w-full rounded-sm bg-gray-100 " />
+              <nav>
+                <ul className="flex flex-col items-center justify-center">
+                  {navLinks.map((item) => (
+                    <li key={item.id} className="relative cursor-pointer">
+                      <a
+                        href={item.link}
+                        className={`navLink_main ${
+                          isLinkActive(item.link) ? "active" : ""
+                        }`}
+                      >
+                        {item.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
-      </a>
+      </div>
 
-      <nav>
+      <nav className="hidden md:block">
         <ul className="flex flex-row">
           {navLinks.map((item) => (
             <li
@@ -129,7 +177,7 @@ function Navbar() {
         </ul>
       </nav>
 
-      <button className="rounded-[10px] bg-[#1A89EC] px-[40px] py-[12px] text-lg text-white">
+      <button className="hidden rounded-[10px] bg-[#1A89EC] px-[40px] py-[12px] text-lg text-white md:block">
         Sign in
       </button>
     </div>

@@ -9,7 +9,7 @@
     @apply navLink flex items-center justify-center gap-[8px]  px-[20px] py-[12px] text-lg text-[#667085];
   }
   .agreement_btn {
-    @apply flex items-center justify-center gap-[8px] px-[20px] py-[12px] bg-[#344054];
+    @apply flex items-center justify-center gap-[5px] bg-[#344054] px-[20px] py-[10px] text-sm md:gap-[8px]  md:px-[20px] md:py-[12px];
   }
 }
 
@@ -41,4 +41,100 @@ a.navLink:hover {
 
 .agreement_bg {
   background: linear-gradient(180deg, #8e99a2, #080808);
+}
+
+.hamburger_Menu > .burger_bar {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background-color: #1a89ec;
+  transform-origin: 2px 1px;
+  transition: all 300ms ease-in-out;
+  z-index: 101;
+}
+
+.hamburger_Menu > .burger_bar:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.clicked.burger_bar:first-child {
+  transform: rotate(45deg);
+}
+
+.clicked.burger_bar:nth-child(2) {
+  opacity: 0;
+}
+
+.clicked.burger_bar:last-child {
+  transform: rotate(-45deg);
+}
+
+.navMenu {
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #fff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  padding: 1.625rem;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  width: calc(100% - 40px);
+}
+
+.navMenu a {
+  display: block;
+  padding: 0.625rem;
+  text-align: center;
+}
+.overlay {
+  opacity: 0;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: linear-gradient(#2d314d, transparent);
+}
+.noScroll {
+  overflow: hidden;
+}
+/* Added this comment to solve a problem */
+
+.fade-in {
+  animation: fade-in 200ms ease-in-out forwards;
+}
+.fade-out {
+  animation: fade-out 200ms ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  1% {
+    opacity: 0;
+    visibility: visible;
+  }
+  to {
+    opacity: 0.99;
+    visibility: visible;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    opacity: 0;
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
 }

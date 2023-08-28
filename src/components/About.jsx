@@ -24,13 +24,15 @@ function About() {
   ];
 
   return (
-    <div className="flex items-center gap-[100px] px-[140px] pb-[67px]">
-      <div className="w-[560px]">
-        <h1 className="text-[40px] font-medium text-[#344054]">About Us</h1>
-        <p className="mb-[36px] text-[32px] text-[#344054]">
+    <div className="flex flex-col items-center gap-[20px] px-[20px] pb-[67px] md:flex-row md:gap-[100px] md:px-[140px]">
+      <div className="text-[#344054] md:w-[560px]">
+        <h1 className="text-center text-[30px] font-medium md:text-left  md:text-[40px]">
+          About Us
+        </h1>
+        <p className="mb-[36px] text-center text-[18px] md:text-left md:text-[32px]">
           Find out briefly but informatively
         </p>
-        <p className="text-[20px] text-[#344054]">
+        <p className="text-center text-[14px] md:text-left md:text-[20px]">
           As an upscale and exclusive chauffeur and limousine service near
           Indonesia, we have been ensuring for more than 15 years that you get
           to your destination on time and safely. We sell in around Indonesia ,
@@ -39,9 +41,9 @@ function About() {
           comfort of our car service.
         </p>
       </div>
-      <div className="flex h-[300px] w-[500px] flex-wrap justify-between rounded-[30px] bg-[#E3E6E9] px-[90px] py-[38px]">
+      <div className="flex flex-wrap justify-center rounded-[30px] bg-[#E3E6E9] px-[90px] py-[38px] md:h-[300px] md:w-[500px] md:justify-between">
         {features.map((feature) => (
-          <div className="mb-[50px] flex flex-col items-center justify-center">
+          <div className="mb-[50px] flex flex-col items-center justify-center last:mb-0 md:last:mb-[50px]">
             <img
               src={feature.icon}
               alt="feature icon"
