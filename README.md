@@ -16,20 +16,28 @@ The project is a web page developed using React, inspired by the design provided
 ## Installation
 
 1. Clone this repository to your local machine using:
-   \`git clone https://github.com/AbdellahSlimani/mobiling`
+   ```bash
+    git clone https://github.com/AbdellahSlimani/mobiling
+   ```
 
-2. Navigate to the project directory:
-   \`cd your-repo-name\`
+3. Navigate to the project directory:
+   ```bash
+   cd mobiling
+   ```
 
-3. Install the project dependencies:
-   \`npm install\`
+5. Install the project dependencies:
+   ```bash
+   npm install
+   ```
 
 ## Usage
 
 1. Start the development server:
-   \`npm start\`
+   ```bash
+   npm start
+   ```
 
-2. Open your browser and visit: \`http://localhost:3000\` to see the live project.
+3. Open your browser and visit: \`http://localhost:3000\` to see the live project.
 
 ## Check the Final Result
 
