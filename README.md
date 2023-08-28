@@ -37,7 +37,7 @@ The project is a web page developed using React, inspired by the design provided
    npm start
    ```
 
-3. Open your browser and visit: \`http://localhost:3000\` to see the live project.
+3. Open your browser and visit: \` http://localhost:3000 \` to see the live project.
 
 ## Check the Final Result
 
