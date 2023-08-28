@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Mobiling/static/css/main.10deab14.css",
-    "main.js": "/Mobiling/static/js/main.58f3457a.js",
+    "main.css": "/Mobiling/static/css/main.0945705b.css",
+    "main.js": "/Mobiling/static/js/main.9359cc17.js",
     "static/media/car-bmw.png": "/Mobiling/static/media/car-bmw.01fc5e84ef4f50f4437c.png",
     "static/media/Touchscreen.svg": "/Mobiling/static/media/Touchscreen.a34b7d5ef8425a9b7c256da38b74a889.svg",
     "static/media/car.svg": "/Mobiling/static/media/car.b05ed6efa790e21ba24ebb8cc55ec537.svg",
@@ -21,11 +21,11 @@
     "static/media/chevron-right.svg": "/Mobiling/static/media/chevron-right.0942f119f6a4823ccb70bf2e63d3a320.svg",
     "static/media/logo.svg": "/Mobiling/static/media/logo.f4b0edb5be642b41e968792e1e0dc8ce.svg",
     "static/media/logoWhite.svg": "/Mobiling/static/media/logoWhite.43f090d4871b0f57e783afda42bd0ca3.svg",
-    "main.10deab14.css.map": "/Mobiling/static/css/main.10deab14.css.map",
-    "main.58f3457a.js.map": "/Mobiling/static/js/main.58f3457a.js.map"
+    "main.0945705b.css.map": "/Mobiling/static/css/main.0945705b.css.map",
+    "main.9359cc17.js.map": "/Mobiling/static/js/main.9359cc17.js.map"
   },
   "entrypoints": [
-    "static/css/main.10deab14.css",
-    "static/js/main.58f3457a.js"
+    "static/css/main.0945705b.css",
+    "static/js/main.9359cc17.js"
   ]
 }
