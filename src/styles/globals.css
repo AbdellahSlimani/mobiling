@@ -9,7 +9,7 @@
     @apply navLink flex items-center justify-center gap-[8px]  px-[20px] py-[12px] text-lg text-[#667085];
   }
   .agreement_btn {
-    @apply flex items-center justify-center gap-[8px] bg-[#344054] px-[20px] py-[12px];
+    @apply flex items-center justify-center gap-[5px] bg-[#344054] px-[20px] py-[10px] text-sm md:gap-[8px]  md:px-[20px] md:py-[12px];
   }
 }
 
