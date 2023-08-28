@@ -44,4 +44,3 @@ Thank you for checking out my project!
 ---
 
 *This project is a result of the Web Developer technical test at Mapersive. The content provided in this README is meant for demonstration purposes only.*
-EOF
